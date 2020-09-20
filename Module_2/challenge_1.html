@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript Rocketseat</title>
+</head>
+<body>
+    <div id="app">
+        <button id="btn">Criar um quadrado</button>
+
+        <div id="box"></div>
+    </div>
+
+    <script>
+        var btnElement = document.querySelector('#btn');
+        var boxElement = document.querySelector('#box');
+
+        btnElement.onclick = function() {
+            var squares = document.createElement('div');
+            squares.style.width = '100px';
+            squares.style.height = '100px';
+            squares.style.backgroundColor = '#f00';
+
+            boxElement.appendChild(squares);
+        };
+    </script>
+    
+</body>
+</html>

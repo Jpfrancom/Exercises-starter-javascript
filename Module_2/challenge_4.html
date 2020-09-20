@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4° Desafio</title>
+</head>
+<body>
+
+    <input type="text" name="nome">
+    <button onClick="adicionar()" >Adicionar</button>
+
+    <ul id="ul">
+
+    </ul>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        for (value of nomes) {
+            var liElement = document.createElement('li');
+            var ulElement = document.querySelector('#ul');
+            var text = document.createTextNode(value);
+
+            liElement.appendChild(text);
+            ulElement.appendChild(liElement);
+        };
+        
+
+        function adicionar() {
+            var inputElement = document.querySelector('input').value
+
+            var textElement = document.createTextNode(inputElement);
+            var liElement = document.createElement('li');
+
+            liElement.appendChild(textElement);
+            ulElement.appendChild(liElement);
+            document.querySelector('input').value = "";
+        };
+
+    </script>
+    
+</body>
+</html>
